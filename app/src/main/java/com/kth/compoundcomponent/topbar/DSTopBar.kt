@@ -16,7 +16,7 @@ import com.kth.compoundcomponent.router.LandingRouter
 import com.kth.compoundcomponent.R
 
 @Composable
-fun DSTopBarComponent(
+fun DSTopBar(
     data: DSTopBarData,
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
