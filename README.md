@@ -1,7 +1,7 @@
 Compounded Component Pattern
 ==
-> 부모 컴포넌트가 UI의 전체 구조와 상태를 관리  
-> 자식 컴포넌트는 그 상태를 받아 UI를 자유롭게 조합할 수 있도록 만든 패턴
+> 부모 컴포넌트가 UI의 전체 구조와 상태를 관리,  
+> 자식 컴포넌트는 그 상태를 받아 UI를 자유롭게 조합할 수 있도록 만든 패턴.
 
 
 # 1. DSDialog (Compound Component)
@@ -34,15 +34,15 @@ fun DSDialogPreview(생략..) {
 ```
 ```text
 DSDialog (부모 컴포저블)
-│
-├─ remember 로 Scope 생성 → DSDefaultDialogScope
-│     └─ 상태 보관: title, message, confirmText, cancelText, confirmUrl 등
-│
 └─ DSDialogScope.() → 자식 컴포넌트로 전달
-│
-├── DSDialogTitle()            ← title 사용
-├── DSDialogConfirmButton()    ← confirmText, confirmUrl, onConfirmClick 사용
-└── DSDialogCancelButton()     ← cancelText, onCancelClick 사용
+    ├── DSDialogTitle()            ← title 사용
+    ├── DSDialogConfirmButton()    ← confirmText, confirmUrl, onConfirmClick 사용
+    └── DSDialogCancelButton()     ← cancelText, onCancelClick 사용
+
+ 
+- DSDialog는 부모 역할로 전체 구조 (Dialog, Surface)를 잡고, 자식에게 상태(scope)를 전달
+- DSDialogScope는 부모의 상태(title 등)를 자식이 쓸 수 있게 해줌
+- 자식 컴포넌트는 DSDialogScope를 리시버로 받아 부모 상태를 공유하며 UI를 그림
 ```
 
 # 2. DSTopBar (Non-Compound Component)
