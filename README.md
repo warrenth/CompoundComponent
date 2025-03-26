@@ -1,12 +1,10 @@
 Compounded Component Pattern
 ==
-----
 > 부모 컴포넌트가 UI의 전체 구조와 상태를 관리  
 > 자식 컴포넌트는 그 상태를 받아 UI를 자유롭게 조합할 수 있도록 만든 패턴
 
 
-# 1. DSDialog (Compound Component 적용)
-----
+# 1. DSDialog (Compound Component)
 > 기본적인 다이얼로그 뼈대는 DSDialog가 담당하며, 내부에 들어갈 구체적인 UI는 사용자가 직접 자식 컴포넌트를 조합해서 구성합니다.
 
 ```kotlin
@@ -47,8 +45,7 @@ DSDialog (부모 컴포저블)
 └── DSDialogCancelButton()     ← cancelText, onCancelClick 사용
 ```
 
-# 2. DSTopBar (Compound Component 미적용)
---
+# 2. DSTopBar (Non-Compound Component)
 > TopBar는 **항상 고정된 구조**로, Compound Component 를 사용하지 않습니다. </br> </br>
 > 고정된 구조는 다음과 같다.  </br>
 > - **Back 버튼**: 항상 고정 (좌측)  </br>
