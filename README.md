@@ -45,6 +45,8 @@ DSDialog (부모 컴포저블)
 - 자식 컴포넌트는 DSDialogScope를 리시버로 받아 부모 상태를 공유하며 UI를 그림
 ```
 
+<img width="591" alt="Image" src="https://github.com/user-attachments/assets/bae129bf-cf6c-4fed-9e5e-bb4be376afa9" />
+
 # 2. DSTopBar (Non-Compound Component)
 > TopBar는 **항상 고정된 구조**로, Compound Component 를 사용하지 않습니다. </br> </br>
 > 고정된 구조는 다음과 같다.  </br>
@@ -74,7 +76,7 @@ DSTopBar (하나의 컴포저블에서 모든 구성 처리)
 └── Right 영역
     └── 최대 2개까지 Action 버튼 (Search, Cart 등) ← data.actions 으로 구성
 ```
-
+<img width="394" alt="Image" src="https://github.com/user-attachments/assets/01f71733-ea16-4c96-8772-101de0c112d1" />
 
 ### Compound Component VS Non-Compound Component
 - UI 구조가 거의 고정되어 있고 커스터마이징이 적은지 판단
